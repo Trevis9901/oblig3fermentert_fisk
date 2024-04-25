@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+    <link rel="Stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin="anonymous">
+    <title>Kinobillett</title>
+</head>
+<body>
+<h1>Bestilling av kinobillett</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Velg Film:</th>
+        <td>
+            <label for="Alternativer"></label><select id="Alternativer" name="Alternativer" onchange="validerAlternativer()">
+            <!--<span id="feilAlternativ" style="color: red"></span> -->
+            <option value="" disabled selected>Velg film her</option>
+            <option value="Shrek">Shrek</option>
+            <option value="Oppenheimer">Oppenheimer</option>
+        </select>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Antall: </th>
+        <td><label for="Antall"></label><input type="number" name="Antall" id="Antall" style="width: 40px" onchange="validerAntall(this.value)"></td>
+        <td><span id="feilAnatall" style="color: red"></span></td>
+    </tr>
+    <tr>
+        <th>Fornavn: </th>
+        <td><label for="Fornavn"></label><input type="text" name="Fornavn" id="Fornavn" onchange="validerFornavn(this.value)"></td>
+        <td><span id="feilFornavn" style="color: red"></span> </td>
+    </tr>
+    <tr>
+        <th>Etternavn: </th>
+        <td><label for="Etternavn"></label><input type="text" name="Etternavn" id="Etternavn" onchange="validerEtternavn(this.value)"></td>
+        <td><span id="feilEtternavn" style="color: red"></span> </td>
+    </tr>
+    <tr>
+        <th>Telefonnr: </th>
+        <td><label for="Telefonnr"></label><input type="number" name="Telefonnr" id="Telefonnr" onchange="validerTelefonnr(this.value)"></td>
+        <td><span id="feilTelefonnr" style="color: red"></span></td>
+    </tr>
+    <tr>
+        <th>Epost: </th>
+        <td><label for="Epost"></label><input type="text" name="Epost" id="Epost" onchange="validerEpost(this.value)"></td>
+        <td><span id="feilEpost" style="color: red"></span></td>
+    </tr>
+    <tr id="KjopBillett">
+        <td colspan="2"><input type="Button" name="Button" id="Button" value="Kjøp Billett" onclick="ValiderOgKjopbillett()"></td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="Vis-Billett">
+    <thead>
+    <tr>
+        <th>Film: </th>
+        <th>Antall Billetter: </th>
+        <th>Fornavn: </th>
+        <th>Etternavn: </th>
+        <th>Telefonnr: </th>
+        <th>Epost: </th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form class="filmer">
+                <h1>Bestilling av kinobilletter</h1>
+                <br>
+                <label for="Alternativer">Film:</label>
+                <select id="Alternativer" onchange="validerAlternativer(this.value)">
+                    <option value="Velg film her">velg film her</option>
+                    <option value="Shrek">Shrek</option>
+                    <option value="Oppenheimer">Oppenheimer</option>
+                    <option value="Saving private Ryan">Saving private Ryan</option>
+                    <option value="Star Wars: Return of the jedi">Star Wars: Return of the jedi</option>
+                </select>
+                <p id="feilAlternativ"></p>
+
+                <br>
+
+                <label for="Antall">Antall: </label><input type="number" name="Antall" id="Antall" style="width: 40px" onchange="validerAntall(this.value)">
+                <p id="feilAntall"></p>
+                <br>
+
+                <label for="Fornavn">Fornavn: </label><input type="text" name="Fornavn" id="Fornavn" onchange="validerFornavn(this.value)">
+                <p id="feilFornavn"></p>
+
+                <label for="Etternavn">Etternavn: </label><input type="text" name="Etternavn" id="Etternavn" onchange="validerEtternavn(this.value)">
+
+
+                <label for="Telefonnr">Telefonnr: </label><input type="number" name="Telefonnr" id="Telefonnr" onchange="validerTelefonnr(this.value)">
+
+
+                <label for="Epost">Epost: </label><input type="text" name="Epost" id="Epost" onchange="validerEpost(this.value)">
+            </form>
+
+        </div>
+        <input type="Button" name="Button" id="Button" value="Kjøp Billett" onclick="ValiderOgKjopbillett()">
+    </div>
+</div>
+-->
+
+</body>
+</html>
